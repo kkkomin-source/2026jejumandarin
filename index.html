@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 제주감귤축제 | Jeju Citrus Festival</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #E8620A;
+    --orange-light: #FF8C38;
+    --orange-pale: #FFF3E8;
+    --orange-deep: #C04E00;
+    --green: #2D6A2D;
+    --green-light: #4A9B4A;
+    --green-pale: #EBF5EB;
+    --yellow: #F5C842;
+    --cream: #FDF8F0;
+    --brown: #5C3A1E;
+    --text-dark: #1A1208;
+    --text-mid: #4A3520;
+    --text-light: #8A6E50;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(253, 248, 240, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(232,98,10,0.15);
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-text {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--orange-deep);
+    line-height: 1.2;
+  }
+
+  .nav-logo-sub {
+    font-size: 10px;
+    color: var(--text-light);
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 18px;
+    font-size: 14px;
+    color: var(--text-mid);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 20px;
+    transition: all 0.2s;
+    letter-spacing: -0.01em;
+  }
+
+  .nav-links a:hover {
+    color: var(--orange);
+    background: var(--orange-pale);
+  }
+
+  .nav-cta {
+    background: var(--orange) !important;
+    color: white !important;
+    border-radius: 20px;
+    padding: 8px 20px !important;
+  }
+
+  .nav-cta:hover {
+    background: var(--orange-deep) !important;
+    color: white !important;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 68px 5% 0;
+    background: linear-gradient(135deg, #FDF8F0 0%, #FFF3E8 50%, #FDF8F0 100%);
+  }
+
+  .hero-bg-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.04;
+    background-image:
+      radial-gradient(circle at 20% 20%, var(--orange) 2px, transparent 2px),
+      radial-gradient(circle at 80% 80%, var(--green) 2px, transparent 2px);
+    background-size: 60px 60px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--orange-pale);
+    color: var(--orange-deep);
+    border: 1px solid rgba(232,98,10,0.25);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(42px, 6vw, 72px);
+    font-weight: 900;
+    line-height: 1.15;
+    color: var(--text-dark);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-title span {
+    color: var(--orange);
+    display: block;
+  }
+
+  .hero-sub {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--text-light);
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    color: var(--text-mid);
+  }
+
+  .hero-meta-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--orange-pale);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .hero-meta strong {
+    color: var(--text-dark);
+    font-weight: 600;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--orange);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(232,98,10,0.3);
+    letter-spacing: -0.01em;
+  }
+
+  .btn-primary:hover {
+    background: var(--orange-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(232,98,10,0.4);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--orange);
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid rgba(232,98,10,0.4);
+    transition: all 0.25s;
+    letter-spacing: -0.01em;
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--orange);
+    background: var(--orange-pale);
+  }
+
+  .hero-illustration {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: clamp(300px, 42vw, 560px);
+    animation: floatIn 1.1s ease both 0.3s;
+  }
+
+  /* SECTIONS COMMON */
+  section {
+    padding: 100px 5%;
+  }
+
+  .section-label {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.25;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .section-desc {
+    font-size: 16px;
+    color: var(--text-light);
+    line-height: 1.8;
+    max-width: 560px;
+  }
+
+  /* ABOUT */
+  #about {
+    background: white;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .stat-card {
+    background: var(--orange-pale);
+    border-radius: 16px;
+    padding: 24px 20px;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--orange-deep);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+
+  .about-svg-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* PROGRAM */
+  #program {
+    background: var(--cream);
+  }
+
+  .program-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .program-header .section-desc {
+    margin: 0 auto;
+  }
+
+  .days-tabs {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+
+  .day-tab {
+    padding: 10px 24px;
+    border-radius: 24px;
+    border: 2px solid rgba(232,98,10,0.25);
+    background: transparent;
+    color: var(--text-mid);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  .day-tab.active, .day-tab:hover {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+  }
+
+  .day-content {
+    display: none;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .day-content.active {
+    display: block;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .program-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .program-timeline::before {
+    content: '';
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--orange-pale), var(--orange-pale));
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 0 24px;
+    position: relative;
+    padding: 24px 0;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 71px;
+    top: 32px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--orange);
+    border: 3px solid var(--cream);
+    box-shadow: 0 0 0 2px var(--orange);
+    z-index: 1;
+  }
+
+  .timeline-time {
+    text-align: right;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--orange);
+    padding-top: 4px;
+    line-height: 1.4;
+  }
+
+  .timeline-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    border: 1px solid rgba(232,98,10,0.1);
+    transition: box-shadow 0.2s;
+  }
+
+  .timeline-card:hover {
+    box-shadow: 0 4px 20px rgba(232,98,10,0.12);
+  }
+
+  .timeline-card h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+  }
+
+  .timeline-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+
+  .timeline-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+  }
+
+  .tag-main { background: #FFF3E8; color: #C04E00; }
+  .tag-culture { background: #EBF5EB; color: #2D6A2D; }
+  .tag-food { background: #FEF9E7; color: #8B6914; }
+  .tag-experience { background: #EBF4FF; color: #1A56A0; }
+
+  /* BOOTH */
+  #booth {
+    background: white;
+  }
+
+  .booth-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 48px auto 0;
+  }
+
+  .booth-card {
+    background: var(--cream);
+    border-radius: 20px;
+    padding: 32px 28px;
+    border: 1px solid rgba(232,98,10,0.12);
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .booth-card::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: rgba(232,98,10,0.05);
+  }
+
+  .booth-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(232,98,10,0.15);
+    border-color: rgba(232,98,10,0.3);
+  }
+
+  .booth-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+  }
+
+  .booth-card h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+  }
+
+  .booth-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* ACCESS / MAP */
+  #access {
+    background: var(--green);
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #access::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.03);
+  }
+
+  .access-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  #access .section-label { color: #9FE1CB; }
+  #access .section-title { color: white; }
+  #access .section-desc { color: rgba(255,255,255,0.7); }
+
+  .access-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .access-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 14px;
+    padding: 20px 22px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .access-card-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .access-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+  }
+
+  .access-card p {
+    font-size: 13px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.6;
+  }
+
+  .map-container {
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  /* REGISTER */
+  #register {
+    background: var(--cream);
+  }
+
+  .register-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .register-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-mid);
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid rgba(232,98,10,0.15);
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--text-dark);
+    background: white;
+    transition: border-color 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 4px rgba(232,98,10,0.08);
+  }
+
+  .form-group textarea {
+    height: 100px;
+    resize: vertical;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .program-checkboxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border: 2px solid rgba(232,98,10,0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: white;
+  }
+
+  .checkbox-item:hover {
+    border-color: var(--orange);
+    background: var(--orange-pale);
+  }
+
+  .checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: var(--orange);
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+  }
+
+  .checkbox-item span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-mid);
+    line-height: 1.3;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 18px;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 8px;
+    box-shadow: 0 4px 20px rgba(232,98,10,0.3);
+    letter-spacing: -0.01em;
+  }
+
+  .submit-btn:hover {
+    background: var(--orange-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(232,98,10,0.4);
+  }
+
+  .form-note {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 12px;
+    line-height: 1.6;
+  }
+
+  .success-msg {
+    display: none;
+    text-align: center;
+    padding: 60px 40px;
+    background: white;
+    border-radius: 20px;
+    border: 2px solid rgba(45,106,45,0.2);
+  }
+
+  .success-msg h3 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 26px;
+    color: var(--green);
+    margin: 20px 0 12px;
+  }
+
+  .success-msg p {
+    font-size: 15px;
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+
+  /* FAQ */
+  #faq {
+    background: white;
+  }
+
+  .faq-inner {
+    max-width: 780px;
+    margin: 48px auto 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid rgba(232,98,10,0.12);
+  }
+
+  .faq-q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: color 0.2s;
+    gap: 16px;
+  }
+
+  .faq-q:hover { color: var(--orange); }
+
+  .faq-arrow {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--orange-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.3s, background 0.2s;
+  }
+
+  .faq-item.open .faq-arrow {
+    transform: rotate(180deg);
+    background: var(--orange);
+  }
+
+  .faq-item.open .faq-arrow svg path { stroke: white; }
+
+  .faq-a {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.8;
+  }
+
+  .faq-a-inner { padding: 0 0 20px; }
+
+  .faq-item.open .faq-a { max-height: 300px; }
+
+  /* FOOTER */
+  footer {
+    background: var(--text-dark);
+    color: rgba(255,255,255,0.5);
+    padding: 48px 5%;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  .footer-meta {
+    font-size: 13px;
+    line-height: 2;
+  }
+
+  .footer-meta strong {
+    color: rgba(255,255,255,0.75);
+  }
+
+  .footer-divider {
+    width: 40px;
+    height: 2px;
+    background: var(--orange);
+    margin: 20px auto;
+    border-radius: 2px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes floatIn {
+    from { opacity: 0; transform: translateY(-40%) translateX(30px); }
+    to { opacity: 1; transform: translateY(-50%) translateX(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(-50%) rotate(0deg); }
+    50% { transform: translateY(-52%) rotate(1deg); }
+  }
+
+  .hero-illustration { animation: float 5s ease-in-out infinite 1.4s; }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+    background: var(--text-dark);
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  @media (max-width: 900px) {
+    .hero-illustration { display: none; }
+    .about-grid, .access-grid { grid-template-columns: 1fr; gap: 40px; }
+    .form-row { grid-template-columns: 1fr; }
+    .program-checkboxes { grid-template-columns: 1fr; }
+    nav .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 70px 5%; }
+    .hero { padding-top: 80px; }
+    .stat-num { font-size: 28px; }
+  }
+
+.program-table-wrap{max-width:1100px;margin:0 auto;overflow-x:auto}
+.program-table{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.program-table th{background:#E8620A;color:#fff;padding:14px;text-align:center}
+.program-table td{padding:12px;border:1px solid #eee;vertical-align:top;font-size:14px;line-height:1.5}
+.program-table tr:nth-child(even){background:#fafafa}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+      <circle cx="16" cy="16" r="14" fill="#FFF3E8"/>
+      <ellipse cx="16" cy="17" rx="9" ry="8" fill="#E8620A"/>
+      <ellipse cx="16" cy="16" rx="7" ry="6" fill="#FF8C38"/>
+      <path d="M16 8 Q18 4 22 3 Q20 7 16 8Z" fill="#2D6A2D"/>
+      <path d="M16 8 Q14 4 11 4 Q12.5 7.5 16 8Z" fill="#4A9B4A"/>
+    </svg>
+    <div>
+      <div class="nav-logo-text">제주감귤축제</div>
+      <div class="nav-logo-sub">JEJU CITRUS FESTIVAL 2026</div>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">행사 소개</a></li>
+    <li><a href="#program">프로그램</a></li>
+    <li><a href="#booth">체험 부스</a></li>
+    <li><a href="#access">찾아오기</a></li>
+    <li><a href="#faq">자주 묻는 질문</a></li>
+    <li><a href="#register" class="nav-cta">지금 접수하기</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🍊 2026 제주특별자치도 공식 행사</div>
+    <h1 class="hero-title">
+      탐라의 황금빛<br>
+      <span>감귤 대축제</span>
+    </h1>
+    <p class="hero-sub">제주의 바람과 햇살이 빚어낸<br>황금빛 감귤, 가을을 물들이다</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <rect x="2" y="3" width="14" height="13" rx="2" stroke="#E8620A" stroke-width="1.5"/>
+            <path d="M2 7h14" stroke="#E8620A" stroke-width="1.5"/>
+            <path d="M6 1v4M12 1v4" stroke="#E8620A" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span><strong>2026년 11월 5일 (목) — 11월 8일 (일)</strong> · 3박 4일</span>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M9 2C6.24 2 4 4.24 4 7c0 4.25 5 9 5 9s5-4.75 5-9c0-2.76-2.24-5-5-5z" stroke="#E8620A" stroke-width="1.5"/>
+            <circle cx="9" cy="7" r="2" stroke="#E8620A" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <span><strong>제주특별자치도 서귀포시</strong> 감귤밭 테마파크 일원</span>
+      </div>
+      <div class="hero-meta-item">
+        <div class="hero-meta-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="7" stroke="#E8620A" stroke-width="1.5"/>
+            <path d="M9 5v4l2.5 2.5" stroke="#E8620A" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span><strong>총 예산 3억원</strong> · 예상 방문객 <strong>3만명</strong></span>
+      </div>
+    </div>
+    <div class="hero-btns">
+      <a href="#register" class="btn-primary">무료 사전접수 →</a>
+      <a href="#program" class="btn-secondary">프로그램 보기</a>
+    </div>
+  </div>
+
+  <!-- Hero SVG Illustration -->
+  <svg class="hero-illustration" viewBox="0 0 480 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sky background -->
+    <ellipse cx="240" cy="480" rx="220" ry="60" fill="#E8F5E3" opacity="0.5"/>
+
+    <!-- Background trees -->
+    <ellipse cx="80" cy="340" rx="45" ry="55" fill="#4A9B4A" opacity="0.4"/>
+    <rect x="76" y="370" width="8" height="40" fill="#5C3A1E" opacity="0.4"/>
+    <ellipse cx="400" cy="330" rx="40" ry="50" fill="#4A9B4A" opacity="0.35"/>
+    <rect x="396" y="360" width="8" height="40" fill="#5C3A1E" opacity="0.35"/>
+
+    <!-- Ground -->
+    <ellipse cx="240" cy="470" rx="180" ry="28" fill="#4A9B4A" opacity="0.3"/>
+    <rect x="60" y="460" width="360" height="20" rx="10" fill="#4A9B4A" opacity="0.2"/>
+
+    <!-- Main tree trunk -->
+    <path d="M230 460 Q228 400 225 360 Q222 320 230 280" stroke="#5C3A1E" stroke-width="14" stroke-linecap="round" fill="none"/>
+    <!-- Branch left -->
+    <path d="M227 370 Q200 360 175 345" stroke="#5C3A1E" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <!-- Branch right -->
+    <path d="M229 350 Q258 340 282 325" stroke="#5C3A1E" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <!-- Branch right 2 -->
+    <path d="M231 310 Q255 298 272 285" stroke="#5C3A1E" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+    <!-- Main canopy -->
+    <ellipse cx="240" cy="260" rx="110" ry="95" fill="#2D6A2D"/>
+    <ellipse cx="218" cy="248" rx="88" ry="78" fill="#3D8B3D"/>
+    <ellipse cx="255" cy="240" rx="80" ry="72" fill="#4A9B4A"/>
+    <ellipse cx="230" cy="232" rx="72" ry="65" fill="#5CAD5C"/>
+
+    <!-- Leaf details -->
+    <ellipse cx="175" cy="255" rx="28" ry="22" fill="#3D8B3D" transform="rotate(-20 175 255)"/>
+    <ellipse cx="300" cy="248" rx="30" ry="22" fill="#3D8B3D" transform="rotate(15 300 248)"/>
+    <ellipse cx="240" cy="180" rx="32" ry="24" fill="#4A9B4A" transform="rotate(5 240 180)"/>
+    <ellipse cx="195" cy="212" rx="24" ry="18" fill="#5CAD5C" transform="rotate(-10 195 212)"/>
+    <ellipse cx="280" cy="205" rx="26" ry="19" fill="#5CAD5C" transform="rotate(12 280 205)"/>
+
+    <!-- Left branch leaves -->
+    <ellipse cx="168" cy="335" rx="35" ry="28" fill="#3D8B3D"/>
+    <ellipse cx="158" cy="330" rx="28" ry="22" fill="#4A9B4A"/>
+
+    <!-- Right branch leaves -->
+    <ellipse cx="292" cy="315" rx="35" ry="28" fill="#3D8B3D"/>
+    <ellipse cx="300" cy="310" rx="27" ry="21" fill="#4A9B4A"/>
+
+    <!-- Oranges on main canopy -->
+    <circle cx="210" cy="255" r="14" fill="#E8620A"/>
+    <circle cx="210" cy="255" r="11" fill="#FF8C38"/>
+    <path d="M210 241 Q212 237 216 236" stroke="#2D6A2D" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <circle cx="260" cy="242" r="16" fill="#E8620A"/>
+    <circle cx="260" cy="242" r="13" fill="#FF8C38"/>
+    <path d="M260 226 Q263 221 268 220" stroke="#2D6A2D" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+
+    <circle cx="230" cy="210" r="13" fill="#C04E00"/>
+    <circle cx="230" cy="210" r="10" fill="#E8620A"/>
+    <path d="M230 197 Q232 193 236 192" stroke="#2D6A2D" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <circle cx="190" cy="228" r="12" fill="#E8620A"/>
+    <circle cx="190" cy="228" r="9" fill="#FF8C38"/>
+    <path d="M190 216 Q192 212 196 211" stroke="#2D6A2D" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <circle cx="278" cy="225" r="13" fill="#C04E00"/>
+    <circle cx="278" cy="225" r="10" fill="#E8620A"/>
+    <path d="M278 212 Q280 207 284 206" stroke="#2D6A2D" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Left branch oranges -->
+    <circle cx="163" cy="322" r="12" fill="#E8620A"/>
+    <circle cx="163" cy="322" r="9" fill="#FF8C38"/>
+    <path d="M163 310 Q165 306 169 305" stroke="#2D6A2D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+    <circle cx="182" cy="330" r="10" fill="#C04E00"/>
+    <circle cx="182" cy="330" r="8" fill="#E8620A"/>
+
+    <!-- Right branch oranges -->
+    <circle cx="296" cy="308" r="12" fill="#E8620A"/>
+    <circle cx="296" cy="308" r="9" fill="#FF8C38"/>
+    <path d="M296 296 Q298 292 302 291" stroke="#2D6A2D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+    <circle cx="278" cy="318" r="10" fill="#C04E00"/>
+    <circle cx="278" cy="318" r="8" fill="#E8620A"/>
+
+    <!-- Fallen oranges on ground -->
+    <circle cx="158" cy="462" r="16" fill="#E8620A"/>
+    <circle cx="158" cy="462" r="13" fill="#FF8C38"/>
+    <circle cx="195" cy="468" r="13" fill="#C04E00"/>
+    <circle cx="195" cy="468" r="10" fill="#E8620A"/>
+    <circle cx="300" cy="465" r="15" fill="#E8620A"/>
+    <circle cx="300" cy="465" r="12" fill="#FF8C38"/>
+    <circle cx="330" cy="470" r="11" fill="#C04E00"/>
+    <circle cx="330" cy="470" r="8" fill="#E8620A"/>
+
+    <!-- Small decorative flowers -->
+    <g opacity="0.8">
+      <circle cx="352" cy="180" r="4" fill="#F5C842"/>
+      <circle cx="362" cy="175" r="3" fill="#F5C842"/>
+      <circle cx="347" cy="170" r="3.5" fill="#F5C842"/>
+    </g>
+    <g opacity="0.7">
+      <circle cx="120" cy="195" r="3.5" fill="#F5C842"/>
+      <circle cx="130" cy="188" r="3" fill="#F5C842"/>
+      <circle cx="113" cy="187" r="3" fill="#F5C842"/>
+    </g>
+
+    <!-- Basket at bottom -->
+    <path d="M190 475 Q190 490 210 492 L270 492 Q290 490 290 475 Q270 473 240 473 Q210 473 190 475Z" fill="#8B5E3C"/>
+    <path d="M193 478 L287 478" stroke="#A06840" stroke-width="2" opacity="0.6"/>
+    <path d="M200 478 L200 491" stroke="#A06840" stroke-width="1.5" opacity="0.5"/>
+    <path d="M220 478 L220 492" stroke="#A06840" stroke-width="1.5" opacity="0.5"/>
+    <path d="M240 478 L240 492" stroke="#A06840" stroke-width="1.5" opacity="0.5"/>
+    <path d="M260 478 L260 492" stroke="#A06840" stroke-width="1.5" opacity="0.5"/>
+    <path d="M280 478 L280 491" stroke="#A06840" stroke-width="1.5" opacity="0.5"/>
+    <!-- Oranges in basket -->
+    <circle cx="215" cy="474" r="8" fill="#E8620A"/>
+    <circle cx="215" cy="474" r="6" fill="#FF8C38"/>
+    <circle cx="232" cy="472" r="9" fill="#C04E00"/>
+    <circle cx="232" cy="472" r="7" fill="#E8620A"/>
+    <circle cx="250" cy="473" r="8.5" fill="#E8620A"/>
+    <circle cx="250" cy="473" r="6.5" fill="#FF8C38"/>
+    <circle cx="268" cy="474" r="8" fill="#C04E00"/>
+    <circle cx="268" cy="474" r="6" fill="#E8620A"/>
+  </svg>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="reveal">
+      <div class="section-label">행사 소개</div>
+      <h2 class="section-title">제주 감귤의 계절,<br>축제로 물들다</h2>
+      <p class="section-desc">매년 11월, 제주 서귀포의 푸른 감귤밭에서 펼쳐지는 제주감귤축제입니다. 감귤 수확 체험부터 전통 문화 공연, 감귤 가공식품 전시까지 — 남녀노소 모두가 즐길 수 있는 제주의 가을 대향연입니다.</p>
+      <div class="about-stats">
+        <div class="stat-card">
+          <div class="stat-num">30,000</div>
+          <div class="stat-label">예상 방문객</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3억원</div>
+          <div class="stat-label">총 행사 예산</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">3박4일</div>
+          <div class="stat-label">행사 기간</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">참여 프로그램</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-svg-wrap reveal">
+      <!-- About illustration: Jeju landscape with Hallasan -->
+      <svg viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:420px;">
+        <!-- Sky -->
+        <rect width="420" height="320" rx="20" fill="#EBF5EB"/>
+
+        <!-- Hallasan mountain -->
+        <path d="M0 220 Q80 160 130 140 Q180 125 210 100 Q240 125 290 140 Q340 160 420 220Z" fill="#4A9B4A" opacity="0.6"/>
+        <path d="M150 200 Q180 155 210 120 Q240 155 270 200Z" fill="#2D6A2D" opacity="0.7"/>
+        <!-- Snow on peak -->
+        <path d="M195 120 Q210 108 225 120 Q218 132 210 135 Q202 132 195 120Z" fill="white" opacity="0.9"/>
+
+        <!-- Sea -->
+        <path d="M0 260 Q105 250 210 255 Q315 260 420 250 L420 320 L0 320Z" fill="#5DCAA5" opacity="0.5"/>
+        <path d="M0 270 Q105 262 210 268 Q315 274 420 262 L420 320 L0 320Z" fill="#1D9E75" opacity="0.4"/>
+
+        <!-- Citrus grove rows -->
+        <ellipse cx="80" cy="235" rx="22" ry="18" fill="#2D6A2D"/>
+        <ellipse cx="75" cy="232" rx="16" ry="13" fill="#4A9B4A"/>
+        <circle cx="78" cy="228" r="5" fill="#E8620A"/>
+        <circle cx="78" cy="228" r="3.5" fill="#FF8C38"/>
+        <circle cx="88" cy="234" r="4.5" fill="#E8620A"/>
+        <circle cx="88" cy="234" r="3" fill="#FF8C38"/>
+
+        <ellipse cx="125" cy="238" rx="22" ry="18" fill="#2D6A2D"/>
+        <ellipse cx="120" cy="235" rx="16" ry="13" fill="#4A9B4A"/>
+        <circle cx="123" cy="231" r="5" fill="#E8620A"/>
+        <circle cx="123" cy="231" r="3.5" fill="#FF8C38"/>
+        <circle cx="133" cy="237" r="4.5" fill="#C04E00"/>
+        <circle cx="133" cy="237" r="3" fill="#E8620A"/>
+
+        <ellipse cx="170" cy="240" rx="22" ry="18" fill="#2D6A2D"/>
+        <ellipse cx="165" cy="237" rx="16" ry="13" fill="#4A9B4A"/>
+        <circle cx="168" cy="233" r="5" fill="#E8620A"/>
+        <circle cx="168" cy="233" r="3.5" fill="#FF8C38"/>
+        <circle cx="178" cy="239" r="4.5" fill="#E8620A"/>
+        <circle cx="178" cy="239" r="3" fill="#FF8C38"/>
+
+        <ellipse cx="250" cy="238" rx="22" ry="18" fill="#2D6A2D"/>
+        <ellipse cx="245" cy="235" rx="16" ry="13" fill="#4A9B4A"/>
+        <circle cx="248" cy="231" r="5" fill="#C04E00"/>
+        <circle cx="248" cy="231" r="3.5" fill="#E8620A"/>
+        <circle cx="258" cy="237" r="4.5" fill="#E8620A"/>
+        <circle cx="258" cy="237" r="3" fill="#FF8C38"/>
+
+        <ellipse cx="295" cy="235" rx="22" ry="18" fill="#2D6A2D"/>
+        <ellipse cx="290" cy="232" rx="16" ry="13" fill="#4A9B4A"/>
+        <circle cx="293" cy="228" r="5" fill="#E8620A"/>
+        <circle cx="293" cy="228" r="3.5" fill="#FF8C38"/>
+        <circle cx="303" cy="234" r="4.5" fill="#C04E00"/>
+        <circle cx="303" cy="234" r="3" fill="#E8620A"/>
+
+        <ellipse cx="340" cy="238" rx="22" ry="18" fill="#2D6A2D"/>
+        <ellipse cx="335" cy="235" rx="16" ry="13" fill="#4A9B4A"/>
+        <circle cx="338" cy="231" r="5" fill="#E8620A"/>
+        <circle cx="338" cy="231" r="3.5" fill="#FF8C38"/>
+        <circle cx="348" cy="237" r="4.5" fill="#E8620A"/>
+        <circle cx="348" cy="237" r="3" fill="#FF8C38"/>
+
+        <!-- Festival tent -->
+        <path d="M185 210 L210 185 L235 210Z" fill="#E8620A"/>
+        <rect x="190" y="210" width="40" height="22" fill="#FF8C38"/>
+        <rect x="200" y="216" width="10" height="16" fill="white" rx="2"/>
+        <!-- Flag -->
+        <line x1="210" y1="185" x2="210" y2="175" stroke="#5C3A1E" stroke-width="1.5"/>
+        <path d="M210 175 L222 180 L210 185Z" fill="#F5C842"/>
+
+        <!-- Sun -->
+        <circle cx="360" cy="55" r="24" fill="#F5C842" opacity="0.8"/>
+        <circle cx="360" cy="55" r="18" fill="#F5C842"/>
+        <!-- Sun rays -->
+        <line x1="360" y1="24" x2="360" y2="16" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="360" y1="86" x2="360" y2="94" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="329" y1="55" x2="321" y2="55" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="391" y1="55" x2="399" y2="55" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="338" y1="33" x2="332" y2="27" stroke="#F5C842" stroke-width="2" stroke-linecap="round"/>
+        <line x1="382" y1="77" x2="388" y2="83" stroke="#F5C842" stroke-width="2" stroke-linecap="round"/>
+        <line x1="382" y1="33" x2="388" y2="27" stroke="#F5C842" stroke-width="2" stroke-linecap="round"/>
+        <line x1="338" y1="77" x2="332" y2="83" stroke="#F5C842" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Haenyeo (diver woman) silhouette in sea -->
+        <circle cx="60" cy="272" r="6" fill="#085041"/>
+        <path d="M55 272 Q60 268 65 272" fill="#085041"/>
+
+        <!-- Jeju pony -->
+        <ellipse cx="370" cy="235" rx="14" ry="9" fill="#8B6914"/>
+        <rect x="360" y="235" width="4" height="10" rx="2" fill="#8B6914"/>
+        <rect x="374" y="235" width="4" height="10" rx="2" fill="#8B6914"/>
+        <circle cx="383" cy="228" r="7" fill="#8B6914"/>
+        <path d="M386 224 Q390 220 392 225" stroke="#5C3A1E" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+        <!-- Clouds -->
+        <ellipse cx="80" cy="50" rx="30" ry="14" fill="white" opacity="0.85"/>
+        <ellipse cx="100" cy="46" rx="20" ry="12" fill="white" opacity="0.85"/>
+        <ellipse cx="60" cy="48" rx="18" ry="10" fill="white" opacity="0.85"/>
+
+        <ellipse cx="180" cy="38" rx="25" ry="11" fill="white" opacity="0.75"/>
+        <ellipse cx="196" cy="35" rx="16" ry="10" fill="white" opacity="0.75"/>
+        <ellipse cx="163" cy="37" rx="16" ry="9" fill="white" opacity="0.75"/>
+
+        <!-- Border frame -->
+        <rect x="1" y="1" width="418" height="318" rx="19" stroke="#4A9B4A" stroke-width="2" fill="none" opacity="0.3"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="program-header reveal">
+    <div class="section-label">행사 프로그램</div>
+    <h2 class="section-title">요일별 프로그램 안내</h2>
+    
+  </div>
+
+  <div class="days-tabs">
+    <button class="day-tab active" onclick="showProgramDay(0,this)">11/5 (목)</button>
+    <button class="day-tab" onclick="showProgramDay(1,this)">11/6 (금)</button>
+    <button class="day-tab" onclick="showProgramDay(2,this)">11/7 (토)</button>
+    <button class="day-tab" onclick="showProgramDay(3,this)">11/8 (일)</button>
+  </div>
+
+  <div class="day-content active" id="pday0">
+    <table class="program-table"><tr><th>시간</th><th>프로그램</th><th>내용</th></tr>
+    <tr><td>10:00</td><td>개막식</td><td>환영사 및 개막 퍼포먼스</td></tr>
+    <tr><td>11:30</td><td>감귤 따기</td><td>감귤 수확 체험</td></tr>
+    <tr><td>13:00</td><td>감귤 테마 점심</td><td>향토음식 제공</td></tr>
+    <tr><td>15:00</td><td>해녀의 노래</td><td>전통문화 공연</td></tr>
+    <tr><td>19:00</td><td>감귤빛 야시장</td><td>야시장 및 불꽃쇼</td></tr></table>
+  </div>
+
+  <div class="day-content" id="pday1">
+    <table class="program-table"><tr><th>시간</th><th>프로그램</th><th>내용</th></tr>
+    <tr><td>09:00</td><td>가공 클래스</td><td>잼 만들기 체험</td></tr>
+    <tr><td>11:00</td><td>농가 투어</td><td>한라봉 농장 견학</td></tr>
+    <tr><td>14:00</td><td>사진 공모전</td><td>전시 및 시상식</td></tr>
+    <tr><td>16:00</td><td>콘서트</td><td>K-POP 공연</td></tr>
+    <tr><td>19:00</td><td>포크 페스티벌</td><td>먹거리 행사</td></tr></table>
+  </div>
+
+  <div class="day-content" id="pday2">
+    <table class="program-table"><tr><th>시간</th><th>프로그램</th><th>내용</th></tr>
+    <tr><td>09:00</td><td>어린이 감귤왕</td><td>어린이 경연</td></tr>
+    <tr><td>11:00</td><td>민속공예 체험</td><td>도예 체험</td></tr>
+    <tr><td>14:00</td><td>국제 심포지엄</td><td>산업 세미나</td></tr>
+    <tr><td>16:30</td><td>베이킹 클래스</td><td>디저트 체험</td></tr>
+    <tr><td>19:30</td><td>탐라국 재현</td><td>창작 뮤지컬</td></tr></table>
+  </div>
+
+  <div class="day-content" id="pday3">
+    <table class="program-table"><tr><th>시간</th><th>프로그램</th><th>내용</th></tr>
+    <tr><td>10:00</td><td>마지막 수확</td><td>감귤 수확 체험</td></tr>
+    <tr><td>12:00</td><td>향토음식 결선</td><td>시민 심사</td></tr>
+    <tr><td>14:00</td><td>생산자 시상식</td><td>우수 농가 시상</td></tr>
+    <tr><td>16:00</td><td>폐막식</td><td>퍼레이드 및 불꽃놀이</td></tr></table>
+  </div>
+</section>
+<!-- BOOTH -->
+<section id="booth">
+  <div class="reveal" style="text-align:center; margin-bottom:0;">
+    <div class="section-label">체험 부스</div>
+    <h2 class="section-title">무엇을 즐기실 건가요?</h2>
+    <p class="section-desc" style="margin: 0 auto 0;">50여 개의 체험 부스에서 제주 감귤 문화를 온몸으로 느껴보세요.</p>
+  </div>
+
+  <div class="booth-grid">
+    <!-- Booth 1 -->
+    <div class="booth-card reveal">
+      <svg class="booth-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="26" fill="#FFF3E8"/>
+        <ellipse cx="28" cy="30" rx="12" ry="11" fill="#E8620A"/>
+        <ellipse cx="28" cy="29" rx="9" ry="8" fill="#FF8C38"/>
+        <path d="M28 18 Q30 13 35 12 Q32 17 28 18Z" fill="#2D6A2D"/>
+        <path d="M28 18 Q26 14 22 14 Q24 17 28 18Z" fill="#4A9B4A"/>
+        <circle cx="22" cy="34" r="5" fill="#E8620A" opacity="0.6"/>
+        <circle cx="34" cy="32" r="4" fill="#E8620A" opacity="0.6"/>
+      </svg>
+      <h3>감귤 직접 따기</h3>
+      <p>제주 감귤 농장에서 직접 손으로 감귤을 수확하는 특별한 체험. 수확한 감귤 2kg를 집으로 가져가실 수 있습니다.</p>
+    </div>
+
+    <!-- Booth 2 -->
+    <div class="booth-card reveal">
+      <svg class="booth-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="26" fill="#EBF5EB"/>
+        <rect x="16" y="20" width="24" height="22" rx="4" fill="#2D6A2D"/>
+        <rect x="18" y="22" width="20" height="18" rx="3" fill="#4A9B4A"/>
+        <ellipse cx="28" cy="18" rx="8" ry="5" fill="#5C3A1E"/>
+        <ellipse cx="28" cy="17" rx="7" ry="4" fill="#8B5E3C"/>
+        <circle cx="24" cy="28" r="3.5" fill="#E8620A"/>
+        <circle cx="24" cy="28" r="2.5" fill="#FF8C38"/>
+        <circle cx="32" cy="30" r="3" fill="#E8620A"/>
+        <circle cx="32" cy="30" r="2" fill="#FF8C38"/>
+        <circle cx="28" cy="34" r="3.5" fill="#C04E00"/>
+        <circle cx="28" cy="34" r="2.5" fill="#E8620A"/>
+      </svg>
+      <h3>감귤 가공 클래스</h3>
+      <p>잼, 마멀레이드, 에이드, 청 등 다양한 감귤 가공식품을 직접 만들어보세요. 소그룹 20인 정원, 완성품은 포장하여 귀가.</p>
+    </div>
+
+    <!-- Booth 3 -->
+    <div class="booth-card reveal">
+      <svg class="booth-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="26" fill="#FEF9E7"/>
+        <path d="M18 42 L22 24 L28 20 L34 24 L38 42Z" fill="#8B6914"/>
+        <path d="M20 42 L23 26 L28 22 L33 26 L36 42Z" fill="#A87C1A"/>
+        <ellipse cx="28" cy="20" rx="8" ry="5" fill="#F5C842"/>
+        <path d="M14 42 L42 42" stroke="#5C3A1E" stroke-width="2" stroke-linecap="round"/>
+        <!-- Smoke -->
+        <path d="M24 18 Q22 14 24 11" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+        <path d="M28 17 Q26 13 28 10" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+        <path d="M32 18 Q30 14 32 11" stroke="#CCC" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+      </svg>
+      <h3>감귤 푸드 스트리트</h3>
+      <p>감귤 떡, 감귤 아이스크림, 감귤 막걸리, 한라봉 타르트 등 감귤을 활용한 특별한 음식을 즐기실 수 있습니다.</p>
+    </div>
+
+    <!-- Booth 4 -->
+    <div class="booth-card reveal">
+      <svg class="booth-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="26" fill="#EBF4FF"/>
+        <!-- Palette -->
+        <ellipse cx="28" cy="30" rx="14" ry="12" fill="#B5D4F4"/>
+        <ellipse cx="28" cy="30" rx="12" ry="10" fill="#E6F1FB"/>
+        <!-- Color dots on palette -->
+        <circle cx="20" cy="28" r="3" fill="#E8620A"/>
+        <circle cx="26" cy="23" r="3" fill="#F5C842"/>
+        <circle cx="32" cy="24" r="3" fill="#2D6A2D"/>
+        <circle cx="35" cy="30" r="3" fill="#1A56A0"/>
+        <!-- Brush -->
+        <rect x="26" y="18" width="3" height="16" rx="1.5" transform="rotate(-30 26 18)" fill="#5C3A1E"/>
+        <path d="M17 36 Q15 40 18 41 Q21 40 19 37Z" fill="#FF8C38"/>
+      </svg>
+      <h3>감귤 아트 체험</h3>
+      <p>감귤을 모티브로 한 도자기 페인팅, 감귤 엽서 만들기, 감귤 캘리그래피 체험. 나만의 기념품을 만들어 가세요.</p>
+    </div>
+
+    <!-- Booth 5 -->
+    <div class="booth-card reveal">
+      <svg class="booth-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="26" fill="#EBF5EB"/>
+        <!-- Haenyeo diving costume -->
+        <ellipse cx="28" cy="32" rx="10" ry="14" fill="#1D9E75"/>
+        <circle cx="28" cy="20" r="8" fill="#F5C0A0"/>
+        <!-- Swim cap -->
+        <path d="M20 20 Q20 12 28 12 Q36 12 36 20Z" fill="#0F6E56"/>
+        <!-- Goggles -->
+        <path d="M22 20 Q24 18 28 18 Q32 18 34 20" stroke="#333" stroke-width="1.5" fill="none"/>
+        <!-- Net/basket -->
+        <ellipse cx="38" cy="35" rx="7" ry="8" fill="none" stroke="#8B5E3C" stroke-width="1.5"/>
+        <circle cx="38" cy="35" r="4" fill="#E8620A" opacity="0.6"/>
+        <circle cx="38" cy="35" r="3" fill="#FF8C38" opacity="0.6"/>
+      </svg>
+      <h3>해녀 문화 체험관</h3>
+      <p>유네스코 등재 제주 해녀 문화를 체험하는 공간. 해녀 의상 착용, 물질 시연 관람, 해녀 채취 해산물 직거래.</p>
+    </div>
+
+    <!-- Booth 6 -->
+    <div class="booth-card reveal">
+      <svg class="booth-icon" viewBox="0 0 56 56" fill="none">
+        <circle cx="28" cy="28" r="26" fill="#FFF3E8"/>
+        <!-- Shopping bag -->
+        <path d="M18 24 L16 44 L40 44 L38 24Z" fill="#E8620A"/>
+        <path d="M18 24 L40 24" stroke="#C04E00" stroke-width="1.5"/>
+        <!-- Handle -->
+        <path d="M22 24 Q22 16 28 16 Q34 16 34 24" stroke="#C04E00" stroke-width="2" fill="none"/>
+        <!-- Orange on bag -->
+        <circle cx="28" cy="34" r="6" fill="#FFF3E8"/>
+        <ellipse cx="28" cy="34" rx="5" ry="4.5" fill="#FF8C38"/>
+        <path d="M28 29 Q29.5 26 32 25" stroke="#2D6A2D" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+      <h3>감귤 직거래 장터</h3>
+      <p>서귀포 농가에서 직접 수확한 신선한 감귤과 한라봉, 레드향 등을 산지 가격으로 구매할 수 있는 직거래 장터.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section id="access">
+  <div class="access-grid">
+    <div class="reveal">
+      <div class="section-label">찾아오기</div>
+      <h2 class="section-title">어떻게 오시나요?</h2>
+      <p class="section-desc">제주시 공항에서 약 40분, 서귀포시 중심부에서 15분 거리에 위치합니다.</p>
+
+      <div class="access-info-cards">
+        <div class="access-card">
+          <div class="access-card-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M3 11 L11 3 L19 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M5 9 L5 18 Q5 19 6 19 L16 19 Q17 19 17 18 L17 9" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+              <rect x="9" y="13" width="4" height="6" rx="1" fill="white" opacity="0.7"/>
+            </svg>
+          </div>
+          <div>
+            <h4>행사장 주소</h4>
+            <p>제주특별자치도 서귀포시 감귤로 100번지<br>서귀포 감귤밭 테마파크 일원 (총 20만㎡)</p>
+          </div>
+        </div>
+
+        <div class="access-card">
+          <div class="access-card-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <rect x="3" y="8" width="16" height="10" rx="2" stroke="white" stroke-width="1.8"/>
+              <path d="M7 8 L7 6 Q7 4 9 4 L13 4 Q15 4 15 6 L15 8" stroke="white" stroke-width="1.8"/>
+              <circle cx="7.5" cy="13" r="1.5" fill="white"/>
+              <circle cx="14.5" cy="13" r="1.5" fill="white"/>
+              <path d="M7.5 15 L7.5 18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M14.5 15 L14.5 18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h4>셔틀버스 운행</h4>
+            <p>제주국제공항 → 행사장 (30분 간격, 09:00~20:00)<br>서귀포시외버스터미널 → 행사장 (15분 간격)</p>
+          </div>
+        </div>
+
+        <div class="access-card">
+          <div class="access-card-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <circle cx="11" cy="11" r="8" stroke="white" stroke-width="1.8"/>
+              <path d="M11 3 L11 11 L15 15" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h4>주차 안내</h4>
+            <p>행사장 인근 임시 주차장 3,000면 무료 운영<br>성수 시간대 (11:00~15:00) 혼잡 예상 — 대중교통 권장</p>
+          </div>
+        </div>
+
+        <div class="access-card">
+          <div class="access-card-icon">
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M11 3 C7.5 3 5 6 5 9 C5 13.5 11 19 11 19 C11 19 17 13.5 17 9 C17 6 14.5 3 11 3Z" stroke="white" stroke-width="1.8"/>
+              <circle cx="11" cy="9" r="2.5" stroke="white" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <div>
+            <h4>내비게이션 검색</h4>
+            <p>"서귀포 감귤밭 테마파크" 또는<br>"2026 제주감귤축제" 로 검색하세요</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map SVG -->
+    <div class="map-container reveal">
+      <svg viewBox="0 0 380 340" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;border-radius:12px;">
+        <!-- Map background -->
+        <rect width="380" height="340" rx="12" fill="#1D4E3A"/>
+
+        <!-- Jeju island shape -->
+        <path d="M40 200 Q60 150 100 130 Q140 115 180 110 Q220 108 260 115 Q300 125 330 150 Q350 170 345 200 Q340 230 310 248 Q270 265 220 268 Q170 270 130 258 Q90 245 60 225 Q40 215 40 200Z" fill="#2D6A2D" opacity="0.8"/>
+
+        <!-- Road network -->
+        <path d="M100 200 L280 200" stroke="rgba(255,255,255,0.25)" stroke-width="3" stroke-dasharray="8,4"/>
+        <path d="M190 140 L190 250" stroke="rgba(255,255,255,0.2)" stroke-width="2" stroke-dasharray="6,4"/>
+        <path d="M100 200 Q130 175 155 165" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+        <path d="M280 200 Q265 175 255 165" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+
+        <!-- Hallasan -->
+        <path d="M160 175 L190 148 L220 175Z" fill="#4A9B4A" opacity="0.7"/>
+        <path d="M178 175 L190 155 L202 175Z" fill="#2D6A2D"/>
+        <!-- Snow cap -->
+        <path d="M184 155 Q190 148 196 155 Q192 163 190 165 Q188 163 184 155Z" fill="rgba(255,255,255,0.6)"/>
+        <text x="190" y="185" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.6)" font-family="sans-serif">한라산</text>
+
+        <!-- Sea area labels -->
+        <text x="60" y="135" font-size="9" fill="rgba(255,255,255,0.3)" font-family="sans-serif" transform="rotate(-20 60 135)">제주해협</text>
+        <text x="290" y="280" font-size="9" fill="rgba(255,255,255,0.3)" font-family="sans-serif">서귀포만</text>
+
+        <!-- Festival location marker -->
+        <circle cx="190" cy="225" r="22" fill="#E8620A" opacity="0.25"/>
+        <circle cx="190" cy="225" r="14" fill="#E8620A" opacity="0.4"/>
+        <circle cx="190" cy="225" r="8" fill="#E8620A"/>
+        <circle cx="190" cy="225" r="5" fill="#FF8C38"/>
+        <!-- Pulse animation ring -->
+        <circle cx="190" cy="225" r="22" stroke="#E8620A" stroke-width="1.5" fill="none" opacity="0.5">
+          <animate attributeName="r" values="14;28;14" dur="2s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.5;0;0.5" dur="2s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Label -->
+        <rect x="148" y="238" width="84" height="20" rx="4" fill="rgba(0,0,0,0.5)"/>
+        <text x="190" y="252" text-anchor="middle" font-size="10" fill="white" font-family="sans-serif" font-weight="bold">🍊 감귤밭 테마파크</text>
+
+        <!-- Airport -->
+        <rect x="155" y="155" width="12" height="12" rx="2" fill="#F5C842" opacity="0.8"/>
+        <text x="155" y="150" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.6)" font-family="sans-serif">✈ 제주공항</text>
+
+        <!-- Seogwipo city -->
+        <circle cx="220" cy="235" r="4" fill="rgba(255,255,255,0.5)"/>
+        <text x="230" y="240" font-size="8" fill="rgba(255,255,255,0.5)" font-family="sans-serif">서귀포시</text>
+
+        <!-- Compass -->
+        <g transform="translate(340,30)">
+          <circle r="16" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+          <path d="M0 -12 L2 0 L0 3 L-2 0Z" fill="white"/>
+          <path d="M0 12 L2 0 L0 -3 L-2 0Z" fill="rgba(255,255,255,0.3)"/>
+          <text y="-14" text-anchor="middle" font-size="7" fill="white" font-family="sans-serif">N</text>
+        </g>
+
+        <!-- Scale bar -->
+        <line x1="30" y1="320" x2="80" y2="320" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+        <line x1="30" y1="316" x2="30" y2="324" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+        <line x1="80" y1="316" x2="80" y2="324" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+        <text x="55" y="315" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.5)" font-family="sans-serif">10km</text>
+
+        <!-- Border -->
+        <rect x="1" y="1" width="378" height="338" rx="12" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register">
+  <div class="register-inner">
+    <div class="register-header reveal">
+      <div class="section-label">사전 접수</div>
+      <h2 class="section-title">지금 바로 접수하세요</h2>
+      <p class="section-desc" style="margin:0 auto;">사전 접수 시 감귤 수확 체험 우선 배정, 주차 예약권, 기념품 증정 혜택을 드립니다.</p>
+    </div>
+
+    <div id="reg-form-wrap" class="reveal">
+      <div style="background:white;border-radius:20px;padding:40px;border:1px solid rgba(232,98,10,0.12);margin-top:40px;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>성명 *</label>
+            <input type="text" id="f-name" placeholder="홍길동">
+          </div>
+          <div class="form-group">
+            <label>연락처 *</label>
+            <input type="tel" id="f-phone" placeholder="010-0000-0000">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>이메일</label>
+            <input type="email" id="f-email" placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label>방문 인원 *</label>
+            <select id="f-count">
+              <option value="">선택하세요</option>
+              <option>1명 (개인)</option>
+              <option>2명 (커플/친구)</option>
+              <option>3~5명 (가족)</option>
+              <option>6~10명 (소그룹)</option>
+              <option>10명 이상 (단체)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>방문 예정일</label>
+            <select id="f-day">
+              <option value="">선택하세요</option>
+              <option>11월 5일 (목) — 개막일</option>
+              <option>11월 6일 (금)</option>
+              <option>11월 7일 (토)</option>
+              <option>11월 8일 (일) — 폐막일</option>
+              <option>여러 날 방문 예정</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>거주 지역</label>
+            <select id="f-region">
+              <option value="">선택하세요</option>
+              <option>제주도 (현지)</option>
+              <option>서울/경기</option>
+              <option>부산/경남</option>
+              <option>대구/경북</option>
+              <option>광주/전남</option>
+              <option>대전/충청</option>
+              <option>강원</option>
+              <option>해외</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>참가 희망 프로그램 (복수 선택 가능)</label>
+          <div class="program-checkboxes">
+            <label class="checkbox-item"><input type="checkbox"> <span>🍊 감귤 수확 체험</span></label>
+            <label class="checkbox-item"><input type="checkbox"> <span>🫙 감귤 가공 클래스</span></label>
+            <label class="checkbox-item"><input type="checkbox"> <span>🎵 야외 콘서트</span></label>
+            <label class="checkbox-item"><input type="checkbox"> <span>🏮 야시장</span></label>
+            <label class="checkbox-item"><input type="checkbox"> <span>🤿 해녀 문화 체험</span></label>
+            <label class="checkbox-item"><input type="checkbox"> <span>🎨 감귤 아트 체험</span></label>
+            <label class="checkbox-item"><input type="checkbox"> <span>🎭 전통 공연 관람</span></label>
+            <label class="checkbox-item"><input type="checkbox"> <span>🛒 직거래 장터</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>요청사항 (선택)</label>
+          <textarea id="f-note" placeholder="휠체어 접근성, 유아 동반, 단체 예약 등 특별 요청사항을 적어주세요."></textarea>
+        </div>
+        <button class="submit-btn" onclick="submitForm()">사전 접수 완료하기 →</button>
+        <p class="form-note">※ 개인정보는 행사 운영 목적으로만 사용되며, 행사 종료 후 즉시 파기됩니다.<br>문의: 제주특별자치도 관광정책과 ☎ 064-710-3000</p>
+      </div>
+    </div>
+
+    <div class="success-msg reveal" id="success-msg">
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" style="margin:0 auto;display:block;">
+        <circle cx="32" cy="32" r="30" fill="#EBF5EB"/>
+        <circle cx="32" cy="32" r="24" fill="#4A9B4A"/>
+        <path d="M20 32 L28 40 L44 24" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h3>접수가 완료되었습니다! 🍊</h3>
+      <p>2024 제주감귤축제 사전 접수를 해주셔서 감사합니다.<br>접수 확인 문자가 입력하신 연락처로 발송됩니다.<br><br>문의: 제주특별자치도 관광정책과 ☎ 064-710-3000</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div style="max-width:780px;margin:0 auto;">
+    <div class="reveal" style="text-align:center;margin-bottom:0;">
+      <div class="section-label">자주 묻는 질문</div>
+      <h2 class="section-title">궁금하신 점이 있으신가요?</h2>
+    </div>
+
+    <div class="faq-inner reveal">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          입장료가 있나요?
+          <div class="faq-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5 L7 9 L11 5" stroke="#E8620A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">기본 입장은 무료입니다. 일부 유료 체험 프로그램(감귤 가공 클래스, 도예 체험 등)은 별도 비용이 발생하며, 사전 접수 시 할인 혜택을 드립니다. 감귤 수확 체험(2kg 포함)은 1만원, 가공 클래스는 2만원입니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          주차는 어떻게 하나요?
+          <div class="faq-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5 L7 9 L11 5" stroke="#E8620A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">행사장 인근 임시 주차장 3,000면을 무료로 운영합니다. 그러나 주말과 성수 시간대(오전 11시~오후 3시)에는 주차 혼잡이 예상되므로 셔틀버스 이용을 강력히 권장합니다. 셔틀버스는 제주국제공항과 서귀포시외버스터미널에서 30분 간격으로 운행됩니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          어린이도 참여할 수 있나요?
+          <div class="faq-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5 L7 9 L11 5" stroke="#E8620A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">물론입니다! 어린이를 위한 전용 프로그램이 마련되어 있습니다. 11/7(토)에는 12세 이하 어린이 대상 '감귤 왕 선발대회'가 진행되며, 매일 어린이 체험존과 키즈 카페가 운영됩니다. 유모차 대여도 가능합니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          반려동물을 동반할 수 있나요?
+          <div class="faq-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5 L7 9 L11 5" stroke="#E8620A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">야외 행사장 일부 구역에는 반려동물 동반 출입이 가능합니다. 단, 감귤 수확 체험 농장과 음식 관련 부스 구역에는 출입이 제한됩니다. 반려동물 동반 시 반드시 목줄을 착용해 주시고, 배변 봉투를 지참해 주세요.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          우천 시에도 행사가 진행되나요?
+          <div class="faq-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5 L7 9 L11 5" stroke="#E8620A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">행사장 내 1,500㎡ 규모의 대형 실내 행사장과 지붕이 있는 복합 부스 공간이 마련되어 있어 우천 시에도 대부분의 프로그램이 정상 진행됩니다. 단, 야외 대형 공연과 퍼레이드는 기상 상황에 따라 일정이 조정될 수 있으며, 공식 SNS를 통해 실시간 안내드립니다.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          감귤을 현장에서 구매할 수 있나요?
+          <div class="faq-arrow">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 5 L7 9 L11 5" stroke="#E8620A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">네! 서귀포 지역 30여 개 농가가 참여하는 감귤 직거래 장터에서 감귤, 한라봉, 레드향, 천혜향 등 다양한 제주 감귤을 산지 직거래 가격으로 구매하실 수 있습니다. 택배 배송 서비스도 현장에서 신청 가능합니다.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">🍊 2026 제주감귤축제</div>
+  <div class="footer-divider"></div>
+  <div class="footer-meta">
+    <strong>주최</strong> 제주특별자치도 · 서귀포시 &nbsp;|&nbsp; <strong>주관</strong> 제주특별자치도 관광정책과<br>
+    <strong>일시</strong> 2026년 11월 5일(목) ~ 11월 8일(일) &nbsp;|&nbsp; <strong>장소</strong> 서귀포시 감귤밭 테마파크 일원<br>
+    <strong>문의</strong> ☎ 064-710-3000 &nbsp;|&nbsp; <strong>이메일</strong> citrus2026@jeju.go.kr<br><br>
+    ⓒ 2026 Jeju Special Self-Governing Province. All rights reserved.
+  </div>
+</footer>
+
+<script>
+function showDay(idx, btn) {
+  document.querySelectorAll('.day-content').forEach((el, i) => {
+    el.classList.toggle('active', i === idx);
+  });
+  document.querySelectorAll('.day-tab').forEach((el, i) => {
+    el.classList.toggle('active', i === idx);
+  });
+}
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+function submitForm() {
+  const name = document.getElementById('f-name').value.trim();
+  const phone = document.getElementById('f-phone').value.trim();
+  const count = document.getElementById('f-count').value;
+  if (!name || !phone || !count) {
+    alert('필수 항목(성명, 연락처, 방문 인원)을 입력해 주세요.');
+    return;
+  }
+  document.getElementById('reg-form-wrap').style.display = 'none';
+  document.getElementById('success-msg').style.display = 'block';
+  window.scrollTo({ top: document.getElementById('register').offsetTop - 80, behavior: 'smooth' });
+}
+
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  if (links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
+    links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:rgba(253,248,240,0.98);padding:20px;gap:4px;z-index:99;border-bottom:1px solid rgba(232,98,10,0.15);';
+    links.querySelectorAll('a').forEach(a => {
+      a.style.cssText = 'display:block;padding:12px 20px;font-size:16px;border-radius:10px;';
+      a.onclick = () => { links.style.display = 'none'; };
+    });
+  }
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+</script>
+
+<script>
+function showProgramDay(idx, btn){
+ document.querySelectorAll('#program .day-content').forEach(el=>el.classList.remove('active'));
+ document.querySelectorAll('#program .day-tab').forEach(el=>el.classList.remove('active'));
+ document.getElementById('pday'+idx).classList.add('active');
+ btn.classList.add('active');
+}
+</script>
+</body>
+
+</html>
